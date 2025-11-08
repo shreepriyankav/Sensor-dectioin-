@@ -1,0 +1,27 @@
+{
+  "name": "wildlife-protection-system",
+  "version": "1.0.0",
+  "description": "Network-independent wildlife protection beacon system with blockchain",
+  "main": "backend_api.js",
+  "scripts": {
+    "start": "node backend_api.js",
+    "dev": "nodemon backend_api.js",
+    "blockchain": "ganache-cli --deterministic --accounts 10 --host 0.0.0.0",
+    "simulate": "node beacon_simulator.js",
+    "demo": "concurrently \"npm start\" \"npm run simulate\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "twilio": "^4.19.0",
+    "web3": "^4.2.0",
+    "mqtt": "^5.2.0",
+    "mongoose": "^8.0.0",
+    "socket.io": "^4.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.11.0",
+    "concurrently": "^8.2.0"
+  }
+}
